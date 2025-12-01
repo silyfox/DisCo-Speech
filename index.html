@@ -412,10 +412,8 @@
 
         <!-- 这边感觉可以改，直接就是 timbre， style， text，然后三个模型结果，然后多放一些不同的风格情感甚至是口音 -->
         <h3 id="section1.2">1.2 Zero-Shot Controllable generation Comparison With Other Methods </h3>
-        <h4>We employ distinct audio prompts as references for timbre and emotional expression, respectively, such that
-            speaker-related timbral characteristics and emotion-related prosodic and intonational features are derived
-            from separate audio sources. This ablation study enables a more effective validation of the emotion
-            modulation mechanism, eliminating confounding effects caused by variations in timbre.</h4>
+        <h4>We employ distinct audio prompts as references for timbre and prosody expression, respectively, such that
+            speaker timbral and speaking style are derived from separate audio sources. </h4>
         <div class="demo-section">
             <div class="table-container">
                 <!--table style="width:100%"-->
@@ -913,7 +911,8 @@
 
         <!-- 这边感觉可以改，直接就是 target， source， 多放一些不同的风格情感甚至是口音 -->
         <h3 id="section2.2">2.2 Zero-Shot Voice conversion of DisCodec </h3>
-        <h4>DiCodec disentangled the speech into content-prosody and speaker timbre representations. We conduct the
+        <h4>DiCodec disentangled the speech into <font class="highlight"> timbre-agnostic content-prosody and
+                prosody-agnostic timbre representations</font>. We conduct the
             evaluation on zero-shot VC task, which requires models to convert speaker timbre while preserving the
             prosody and content of the source speech.</h4>
         <div class="demo-section">
@@ -930,181 +929,183 @@
                     <!-- bage -->
                     <tr>
                         <td rowspan="1">
-                            <div class="demo-item"><audio controls>
+                            <di class="demo-item"><audio controls>
                                     <source src="ex_codec_vc/target/00004541-00000056-m.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/100006_apy_g002_dis.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/100006_apy_g002_dis_+_00004541-00000056-m.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/00004541-00000056-m.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/900106_apy_f_sur.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/900106_apy_f_sur_+_00004541-00000056-m.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/00004510-00000116-f.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/cn_m_whisper_index.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/cn_m_whisper_index_+_00004510-00000116-f.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/00004510-00000116-f.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/cpindextts_05_cry_1.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/indextts_05_cry_1_+_00004510-00000116-f.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                    <!-- xindong -->
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/en_f_24504889.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/indextts_08_angry_3.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/indextts_08_angry_3_+_en_f_24504889.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/indextts_jieshuonan.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/indextts_10_cry_2.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/indextts_10_cry_2_+_indextts_jieshuonan.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                    <!-- 四川话 -->
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/en_f_24504889.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/low_3_idex.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/low_3_idex_+_en_f_24504889.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                    <!-- 解说/故事风格 -->
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/indextts_jieshuonan.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/poorness_cn_child_f.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/poorness_cn_child_f_+_indextts_jieshuonan.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                    <!-- 魅惑/撒娇 -->
-                    <tr>
-                        <td rowspan="1">
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/target/00004845-00000118-m.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/source/sajiao_cn_f.wav" type="audio/wav">
-                                </audio></div>
-                        </td>
-                        <td>
-                            <div class="demo-item"><audio controls>
-                                    <source src="ex_codec_vc/discodec/sajiao_cn_f_+_00004845-00000118-m.wav"
-                                        type="audio/wav">
-                                </audio></div>
-                        </td>
-                    </tr>
-
-                </table>
+                                </audio>
+                                <p class="audio-caption"> male speaker </p>
             </div>
+            </td>
+            <td>
+                <div class="demo-item"><audio controls>
+                        <source src="ex_codec_vc/source/100006_apy_g002_dis.wav" type="audio/wav">
+                    </audio>
+                    <p class="audio-caption"> famale speaker with disgust emotion </p>
+                </div>
+            </td>
+            <td>
+                <div class="demo-item"><audio controls>
+                        <source src="ex_codec_vc/discodec/100006_apy_g002_dis_+_00004541-00000056-m.wav"
+                            type="audio/wav">
+                    </audio></div>
+            </td>
+            </tr>
+
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/00004541-00000056-m.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/900106_apy_f_sur.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/900106_apy_f_sur_+_00004541-00000056-m.wav"
+                                type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/00004510-00000116-f.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/cn_m_whisper_index.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/cn_m_whisper_index_+_00004510-00000116-f.wav"
+                                type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/00004510-00000116-f.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/cpindextts_05_cry_1.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/indextts_05_cry_1_+_00004510-00000116-f.wav"
+                                type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+            <!-- xindong -->
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/en_f_24504889.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/indextts_08_angry_3.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/indextts_08_angry_3_+_en_f_24504889.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/indextts_jieshuonan.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/indextts_10_cry_2.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/indextts_10_cry_2_+_indextts_jieshuonan.wav"
+                                type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+            <!-- 四川话 -->
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/en_f_24504889.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/low_3_idex.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/low_3_idex_+_en_f_24504889.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+            <!-- 解说/故事风格 -->
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/indextts_jieshuonan.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/poorness_cn_child_f.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/poorness_cn_child_f_+_indextts_jieshuonan.wav"
+                                type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+            <!-- 魅惑/撒娇 -->
+            <tr>
+                <td rowspan="1">
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/target/00004845-00000118-m.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/source/sajiao_cn_f.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+                <td>
+                    <div class="demo-item"><audio controls>
+                            <source src="ex_codec_vc/discodec/sajiao_cn_f_+_00004845-00000118-m.wav" type="audio/wav">
+                        </audio></div>
+                </td>
+            </tr>
+
+            </table>
+        </div>
         </div>
 
 
