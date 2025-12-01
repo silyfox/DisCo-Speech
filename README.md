@@ -1,2 +1,0 @@
-# DisCo-Speech
-demo
